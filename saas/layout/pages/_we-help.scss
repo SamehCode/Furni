@@ -1,0 +1,229 @@
+// .we-help {
+//     padding: 60px 0 0;
+//     .container {
+//         .col-4 {
+//             @include breakPoints(xs) {
+//                 width: 66.6%;
+//             }
+//             img {
+//                 border-radius: 1.5rem;
+//                 height: 500px;
+//             }
+//         }
+//         .col-2 {
+//             @include breakPoints(xs) {
+//                 width: 32.6%;
+//             }
+//             img {
+//                 padding-left: 15px;
+//                 border-radius: 2rem;
+//                 height: 180px;
+//             }
+//         }
+//         .col-6 {
+           
+//         }
+//         .col-3 {
+//             @include breakPoints(xs) {
+//                 width: 50%;
+//                 margin-left: 250px;
+//             }
+//             &.gap {
+//                 height: 10px;
+//             }
+//             img {
+//                 margin-top: -320px;
+//                 height: 350px;
+//                 border-radius: 1.5rem;
+//             }
+//         }
+//         .col-1 {
+//             .empty {
+//                 height: 1px;
+//             }
+//         }
+//         .col-5 {
+//             .right {
+//                 h2 {
+//                     color: $darkColor;
+//                     text-transform: capitalize;
+//                     font-size: 2rem;
+//                     font-weight: 600;
+//                 }
+//                 p:first-of-type {
+//                     color: $pColor;
+//                     margin: 30px 0;
+//                     line-height: 1.8;
+//                 }
+//                 .features {
+//                     display: flex;
+//                     flex-wrap: wrap;
+//                     gap: 15px;
+//                     p.feat {
+//                         margin: 0;
+//                         flex-basis: calc(50% - 10px);
+//                         position: relative;
+//                         padding-left: 30px;
+//                         line-height: 1.4;
+//                         color: $pColor;
+                        
+//                         &::before {
+//                             position: absolute;
+//                             content: '';
+//                             width: 5px;
+//                             height: 5px;
+//                             border-radius: 50%;
+//                             background-color: transparent;
+//                             border: 2px solid $darkColor;
+//                             left: 0;
+//                             top: 10px;
+//                         }
+//                     }
+//                 }
+//                 button {
+//                     background-color: $darkColor;
+//                     color: white;
+//                     margin: 30px 0;
+//                     font-size: 1.25rem;
+//                     transition: .3s;
+//                     &:hover {
+//                         background-color: black;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.we-help {
+    background-color: #eee;
+    padding: 80px 0;
+    .container {
+        position: relative;
+        @include breakPoints(xs) {
+            height: 1000px;
+        }
+        .splash {
+            @include splash;
+            top: -7%;
+            left: -4%;
+            span {
+                background-color: $greenColor;
+            }
+                
+        }
+        .col-6 {
+            position: relative;
+            height: 500px;
+            @include breakPoints(xs) {
+                width: 100%;
+            }
+            @include breakPoints(sm) {
+                width: 100%;
+            }
+            @include breakPoints(md) {
+                width: 50%;
+            }
+            img {
+                position: absolute;
+                border-radius: 1rem;
+                &:first-of-type {
+                    width: 66%;
+                    height: 90%;
+                    left: 0;
+                }
+                &:nth-of-type(2) {
+                    width: 30%;
+                    height: 30%;
+                    right: 0;
+                }
+                &:last-of-type {
+                    width: 50%;
+                    height: 70%;
+                    right: 0;
+                    top: 35%;
+                }
+            }
+        }
+        .col-5 {
+            position: relative;
+            @include breakPoints(xs) {
+                width: 100%;
+                margin: 3rem 0;
+            }
+            @include breakPoints(sm) {
+                width: 100%;
+                margin: 3rem 0;
+            }
+            @include breakPoints(md) {
+                width: 41.6%;
+                margin: 0;
+            }
+            .right {
+                
+                
+                position: absolute;
+                right: 0;
+                @include breakPoints(xs) {
+                    width: 100%;
+                }
+                @include breakPoints(sm) {
+                    width: 100%;
+                }
+                @include breakPoints(md) {
+                    width: 85%;
+                    
+                }
+                h2 {
+                    text-transform: capitalize;
+                    font-size: 1.75rem;
+                    font-weight: 500;
+                }
+                p:first-of-type {
+                    margin: 2rem 0;
+                    line-height: 2;
+                    color: $pColor;
+                    font-size: .9rem;
+                }
+                .features {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    .feat {
+                        margin: 0;
+                        width: calc(50% - 10px);
+                        color: $pColor;
+                        position: relative;
+                        padding-left: 15px;
+                        line-height: 1.5;
+                        font-size: .8rem;
+                        
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 10px;                            
+                            width: 3px;
+                            height: 3px;
+                            padding: 1px;
+                            border-radius: 50%;
+                            border: 2px solid $darkColor;
+                            @include breakPoints(sm) {
+                                top: 5px;
+                            }
+                        }
+                    }
+                }
+                button {
+                    margin-top: 2rem;
+                    background-color: $darkColor;
+                    transition: .3s;
+                    color: white;
+                    &:hover {
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.choose-us {
+    padding: 100px 0;
+    .container {
+        position: relative;
+        display: flex;
+        gap: 80px;
+        flex-wrap: wrap;
+        .splash {
+            top: -13%;
+            right: 32%;
+            span {
+                background-color: $yellowColor;
+            }
+            @include splash;
+        }
+        @include breakPoints(xs) {
+            .col-6 {
+                width: 100%;
+            }
+            .col-5 {
+                width: 100%;
+            }
+        }
+        @include breakPoints(sm) {
+            .col-6 {
+                width: 100%;
+            }
+            .col-5 {
+                width: 100%;
+            }
+        }
+        @include breakPoints(lg) {
+            flex-wrap: nowrap;
+            .col-6 {
+                width: 50%;
+            }
+            .col-5 {
+                width: 41.666667%;
+            }
+            
+        }
+        .main-title {
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 500;
+                
+            }
+            p {
+                width: 85%;
+                color: $pColor;
+                line-height: 1.7;
+                margin: 20px 0;
+            }
+        }
+        .features {
+            margin-top: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            .feat {
+                flex-basis: calc(50% - 30px);
+                position: relative;
+                @include breakPoints(xs) {
+                    flex-basis: 100%;
+                    text-align: center;
+                }
+                svg {
+                    
+                    
+                    }
+                }
+                h4 {
+                    margin: 12px 0;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                }
+                p {
+                    color: $pColor;
+                    line-height: 1.6;
+                }
+            }
+            img {
+                border-radius: 2rem;
+                height: 600px;
+            }
+        }
+    }

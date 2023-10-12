@@ -1,0 +1,21 @@
+* {
+    // box-sizing: border-box;
+    @include prefixer(box-sizing, border-box, webkit moz);
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'tahoma';
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.img-responsive {
+    width: 100%;
+}
+.clearfix {
+    clear: both;
+}

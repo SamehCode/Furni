@@ -1,0 +1,103 @@
+.testi {
+    padding: 40px 0;
+    .slider {
+        .container {
+            text-align: center;
+            position: relative;
+            min-height: 500px;
+            overflow: hidden;
+            @include breakPoints(xs) {
+                height: 650px;
+            }
+            .slide {
+                width: 70%;
+                position: absolute;
+                top: 0;
+                left: -200%;
+                transition: 1s;
+                opacity: 0;
+                &.active {
+                    left: 15%;
+                    opacity: 1;
+                }
+                h2 {
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    letter-spacing: 2px;
+                    font-size: 1.75rem;
+                }
+                p {
+                    color: $pColor;
+                    line-height: 1.7;
+                    margin: 30px 0;
+                    font-size: 1.10rem;
+                }
+                .person {
+                    margin-top: 60px;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                    }
+                    h5 {
+                        text-transform: capitalize;
+                        margin: 20px 0 7px;
+                        font-weight: 600;
+                    }
+                    span {
+                        color: $pColor;
+                        font-size: .9rem;
+                    }
+                }
+            }
+            ul.bullets {
+                display: flex;
+                gap: 10px;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                li {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: #ccc;
+                    cursor: pointer;
+                    transition: .3s;
+                    &.active {
+                        background-color: $darkColor;
+                    }
+                    &:hover {
+                        background-color: $darkColor;
+                    }
+
+                }
+            }
+            .arrow {
+                background-color: #ddd;
+                width: 50px;
+                height: 50px;
+                padding: 10px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                transition: .3s;
+                &:hover {
+                    background-color: $greenColor;
+                    color: white;
+                }
+                &.left {
+                    left: 0;
+                }
+                &.right {
+                    right: 0;
+                }
+            }
+        }
+    }
+}

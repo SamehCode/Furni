@@ -1,0 +1,78 @@
+.show {
+    padding: 80px 0;
+    background-color: #eee;
+    .container {
+        .col-4 {
+            @include breakPoints(xs) {
+                width: 100%;
+                margin-bottom: 2rem;
+            }            
+            @include breakPoints(sm) {
+                width: calc(50% - 10px);
+                margin-bottom: 3rem; 
+            }
+            @include breakPoints(lg) {
+                width: calc(33.3% - 10px);      
+            }
+            .box {
+                display: flex;
+                gap: 5px;
+                @include breakPoints(xs) {
+                    gap: 10px;
+                }
+                .image {
+                    position: relative;
+                    width: 100%;
+                    @include breakPoints(xs) {
+                        height: 100px;
+                        width: 100px;
+                        img {
+                            height: 100%;
+                        }
+                    }
+                    @include breakPoints(sm) {
+                        width: 200px;
+                    }
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 75%;
+                        height: 75%;
+                        background-color: rgba(#080, .1);
+                        top: 30%;
+                        left: 30%;
+                        transform: translate(-30%, -30%);
+                        border-radius: 1rem;
+                    }
+    
+                }
+                .text {
+                    
+                    h3 {
+                        text-transform: capitalize;
+                        font-size: .9rem;
+                    }
+                    p {
+                        margin: 20px 0;
+                        line-height: 1.4;
+                        font-size: .9rem;
+                        color: $pColor;
+                        @include breakPoints(xs) {
+                            margin: 10px 0;
+                        }
+                    }
+                    a {
+                        text-transform: capitalize;
+                        font-size: .9rem;
+                        color: #000;
+                        transition: .3s;
+                        &:hover {
+                            color: #777; 
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.landing {
+    height: 550px;
+    @include breakPoints(xs) {
+        height: 700px;
+
+    }
+    @include breakPoints(sm) {
+        height: 750px;
+
+    }
+    @include breakPoints(lg) {
+        height: 500px;
+
+    }
+    background-color: $greenColor;
+    .col-4 {
+        @include breakPoints(xs) {
+            width: 100%;
+        }
+        @include breakPoints(sm) {
+            width: 100%;
+        }
+        @include breakPoints(lg) {
+            width: 33.3%;
+          
+        }
+        .box {
+            margin-top: 70px;
+            font-weight: 600;
+            h1 {
+                @include breakPoints(xs) {
+                    font-size: 1.75rem;
+                }
+                font-size: 2rem;
+                color: white;
+                text-transform: capitalize;
+                line-height: 1.4;
+            }
+            p {
+                color: $greyColor;
+                margin: 30px 0;
+                line-height: 1.6;
+            }
+            .buttons {
+                button {
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: 2px solid $greyColor;
+                    transition: .3s;
+                    margin-right: 7px;
+                    &.active {
+                        background-color: $yellowColor;
+                        border-color: $yellowColor;
+                        a {
+                            color: $darkColor;
+                        }
+                    }
+                    &:not(.active):hover {
+                        border-color: white;
+                    }
+                    a {
+                        font-size: 16px;
+                        font-weight: bold;
+                        text-transform: capitalize;
+                        color: #fff;
+                    }
+    
+                }
+            }
+        }
+
+    }
+    .col-8 {
+        @include breakPoints(xs) {
+            width: 100%;
+        }
+        @include breakPoints(sm) {
+            width: 100%;
+        }
+        @include breakPoints(lg) {
+            width: 66.6%;
+            .image {
+                margin-left: 100px;
+            }
+        }
+    
+    }
+}

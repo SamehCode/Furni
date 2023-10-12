@@ -1,0 +1,73 @@
+.subscribe {
+    padding: 100px 0;
+    position: relative;
+    @include breakPoints(xs) {
+        padding: 100px 0;
+    }
+    img.sofa {
+        width: 380px;
+        height: 320px;
+        position: absolute;
+        top: -130px;
+        right: 40px;
+        @include breakPoints(xs) {
+            right: 0;
+        }
+    }
+    .container {
+        h3 {
+            margin-top: 50px;
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 1.25rem;
+            color: #3b5d50;
+            svg {
+                font-weight: 300;
+                color: #777;
+            }
+        }
+        form {
+            margin-top: 15px;
+            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            input {
+                &:not([type='submit']) {
+                    width: 260px;
+                    @include breakPoints(xs) {
+                        width: 50%;
+                    }
+                }
+                border-radius: .5rem;
+                border: 1px solid #ccc;
+                padding: 15px;
+                &::placeholder {
+                    text-transform: capitalize;
+                }
+                &[type='submit'] {
+                   position: relative;
+                    display: none;
+                    & + .submit-icon {
+                        width: 70px;
+                        height: 35px;
+                        padding: 23px;
+                        border-radius: .5rem;
+                        background-color: $greenColor;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        cursor: pointer;
+                        transition: .3s;
+                        &:hover {
+                            background-color: $darkColor;
+                        }
+                        svg {
+                           font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

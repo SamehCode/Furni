@@ -1,0 +1,108 @@
+.recent {
+    padding: 80px 0 40px;
+    background-color: #eee;
+    min-height: 650px;
+    @include breakPoints(xs) {
+        height: 1500px;
+    }
+    .container {
+        .title {
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+            align-items: center;
+            text-transform: capitalize;
+            h2.heading {
+                font-weight: 500;
+                font-size: 2rem;
+            }
+            a.posts {
+                color: $darkColor;
+                font-weight: 600;
+                font-size: .9rem;
+                text-decoration: underline;
+                transition: .3s;
+                &:hover {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+        .blogs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            @include breakPoints(sm) {
+                gap: 50px;
+            }
+            @include breakPoints(md) {
+                gap: 25px;
+            }
+            .col-4 {
+                @include breakPoints(xs) {
+                    width: 100%;
+                }
+                @include breakPoints(sm) {
+                    width: calc(50% - 25px);
+                }
+                @include breakPoints(md) {
+                    width: calc(33.3% - 25px);
+                }
+                .blog {
+                    position: relative;
+                    &:hover .overlay {
+                        opacity: 1;
+                    }
+                    .overlay {
+                        @include overlay;
+                        background-color: rgba(white, .2);
+                        opacity: 0;
+                        cursor: pointer;
+                        transition: .3s;
+                    }
+                    img {
+                        border-radius: 2rem;
+                        height: 300px;
+                        cursor: pointer;
+                        @include breakPoints(sm) {
+                            height: 170px;
+                        }
+                        @include breakPoints(md) {
+                            height: 250px;
+                        }
+                    }
+                    .text {
+                        padding: 15px;
+                        h5 {
+                            text-transform: capitalize;
+                            font: {
+                                size: 1rem;
+                                weight: bold;
+                            }
+                        }
+                        p {
+                            color: #777;
+                            font-size: .9rem;
+                            @include breakPoints(xs) {
+                                font-size: .8rem;
+                            }
+                            @include breakPoints(sm) {
+                                font-size: .8rem;
+                            }
+                            @include breakPoints(md) {
+                                font-size: .9rem;
+                            }
+                            span {
+                                color: black;
+                                font-weight: 600;
+                                padding-top: .5rem;
+                                display: inline-block;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
